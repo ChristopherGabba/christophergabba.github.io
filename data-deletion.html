@@ -1,19 +1,117 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Data Deletione</title>
+    <meta charset="UTF-8">
+    <title>ReelFeel - Feedback</title>
+    <style>
+        /* Add your CSS styles here (same styles as before) */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #242424;
+            color: white;
+        }
+
+        header {
+            background-color: #2b6dc0;
+            padding: 10px;
+            color: white;
+        }
+
+        header a {
+            color: #FF3981;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #242424;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #FF3981;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Form styles */
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #FF3981;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #E62968;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 </head>
 <body>
     <header>
-        <!-- Your navigation menu or header content here -->
+        <nav>
+            <a href="user-agreement.html">User Agreement</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+            <a href="data-deletion.html">Data Deletion</a>
+        </nav>
     </header>
 
-    <main>
-        <!-- Content specific to the page goes here -->
-    </main>
+    <div class="container">
+        <h1>Feedback and Data Deletion Request</h1>
+        <p>
+            Use this form to provide feedback about ReelFeel or to request data deletion.
+        </p>
 
-    <footer>
-        <!-- Footer content here -->
-    </footer>
+        <form action="process_form.php" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 </body>
 </html>
